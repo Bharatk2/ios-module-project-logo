@@ -71,6 +71,31 @@ class LogoView: UIView {
         context.closePath()
         context.fillPath()
         
+        // cutting out the triangle
+        startPoint  = CGPoint(x: offset + (35 * scaleFactor),
+                                    y: offset + (66 * scaleFactor))
+              nextPoint   = CGPoint(x: offset + (50 * scaleFactor),
+                                    y: offset + (40 * scaleFactor))
+              endPoint    = CGPoint(x: offset + (65 * scaleFactor),
+                                    y: offset + (66 * scaleFactor))
+              context.beginPath()
+              context.move(to: startPoint)
+              context.setFillColor(lambdaRed)
+              context.addLine(to: nextPoint)
+              context.addLine(to: endPoint)
+              context.closePath()
+              context.fillPath()
+        
+         rect = CGRect(x: offset + (35 * scaleFactor),
+                              y: offset + (10 * scaleFactor),
+                              width: (30 * scaleFactor),
+                              height: (15 * scaleFactor))
+                context.addRect(rect)
+      
+                context.setFillColor(lambdaRed)
+                context.fillPath()
+
+        
 }
     
 
