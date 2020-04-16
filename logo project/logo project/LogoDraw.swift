@@ -27,4 +27,18 @@ class LogoView: UIView {
         super.init(coder: aDecoder)
         backgroundColor = UIColor.clear
     }
+    
+    override func draw(_ rect: CGRect) {
+    
+    guard let context = UIGraphicsGetCurrentContext() else { return }
+         let scaleFactor: CGFloat = (rect.width - 20.0) / 100.0
+        
+        var rect = CGRect(x: 10, y: 10,
+                          width: 100 * scaleFactor,
+                          height: 78 * scaleFactor)
+        context.addRect(rect)
+        context.setFillColor(lambdaRed)
+        context.fillPath()
+}
+
 }
