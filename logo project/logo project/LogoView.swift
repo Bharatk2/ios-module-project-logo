@@ -63,6 +63,14 @@ class LogoView: UIView {
                endPoint    = CGPoint(x: offset + (78 * scaleFactor),
                                      y: offset + (65 * scaleFactor))
         
+        context.beginPath()
+        context.move(to: startPoint)
+        context.setFillColor(UIColor.white.cgColor)
+        context.addLine(to: nextPoint)
+        context.addLine(to: endPoint)
+        context.closePath()
+        context.fillPath()
+        
 }
     
 
