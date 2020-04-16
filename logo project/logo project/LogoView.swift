@@ -55,6 +55,14 @@ class LogoView: UIView {
                context.closePath()
                context.fillPath()
         
+        // inside triangle
+        startPoint  = CGPoint(x: offset + (22 * scaleFactor),
+                                     y: offset + (65 * scaleFactor))
+               nextPoint   = CGPoint(x: offset + (50 * scaleFactor),
+                                     y: offset + (15 * scaleFactor))
+               endPoint    = CGPoint(x: offset + (78 * scaleFactor),
+                                     y: offset + (65 * scaleFactor))
+        
 }
     
 
