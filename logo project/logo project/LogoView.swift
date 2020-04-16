@@ -39,6 +39,23 @@ class LogoView: UIView {
         context.addRect(rect)
         context.setFillColor(lambdaRed)
         context.fillPath()
+        
+        //Bottom angle added
+        var startPoint  = CGPoint(x: offset,
+                                         y: offset + ((77.9 + debug) * scaleFactor))
+               var nextPoint   = CGPoint(x: offset + (50.0 * scaleFactor),
+                                         y: offset + ((77.9 + 37 + debug) * scaleFactor))
+               var endPoint    = CGPoint(x: offset + (100.0 * scaleFactor),
+                                         y: offset + ((77.9 + debug) * scaleFactor))
+               context.beginPath()
+               context.move(to: startPoint)
+               context.setFillColor(lambdaRed)
+               context.addLine(to: nextPoint)
+               context.addLine(to: endPoint)
+               context.closePath()
+               context.fillPath()
+        
 }
+    
 
 }
